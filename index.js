@@ -47,16 +47,16 @@ function divFizzBuzz(fizz, buzz) {
     const div = document.getElementById(`myid${i}`);
     if (i % fizz.value === 0 && i % buzz.value === 0) {
       div.innerText = "FizzBuzz";
-      div.classList.add("dividesEvenlyByThreeAndFive");
+      div.classList.add("FizzBuzz");
     } else if (i % fizz.value === 0) {
       div.innerText = "Fizz";
-      div.classList.add("dividesEvenlyByThreeOnly");
+      div.classList.add("Fizz");
     } else if (i % buzz.value === 0) {
       div.innerText = "Buzz";
-      div.classList.add("dividesEvenlyByFiveOnly");
+      div.classList.add("Buzz");
     } else {
       div.innerText = i;
-      div.classList.add("doesNotDivideEvenlyByThreeOrFive");
+      div.classList.add("notFizzNorBuzzAndNotFizzBuzz");
     }
   }
 }
