@@ -30,16 +30,10 @@ function generateDivs(starting, ending) {
     const div = document.createElement("div");
     div.classList.add("div");
     document.querySelector("main").appendChild(div);
+    div.id = `myid${i}`;
   }
-  setIdforEachDiv();
+  console.log(document.querySelectorAll(".div"));
   divFizzBuzz(fizz, buzz);
-}
-
-function setIdforEachDiv() {
-  const divs = document.querySelectorAll(".div");
-  divs.forEach((div, index) => {
-    div.id = `myid${index + 1}`;
-  });
 }
 
 function divFizzBuzz(fizz, buzz) {
