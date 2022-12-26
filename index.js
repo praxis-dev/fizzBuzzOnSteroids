@@ -1,13 +1,15 @@
+/*jshint esversion: 6 */
+
 const form = document.querySelector("form");
-let starting = form.elements["startingValue"];
-let ending = form.elements["endingValue"];
-let fizz = form.elements["fizzValue"];
-let buzz = form.elements["buzzValue"];
+let starting = form.elements.startingValue;
+let ending = form.elements.endingValue;
+let fizz = form.elements.fizzValue;
+let buzz = form.elements.buzzValue;
 const button = document.querySelector("button");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  generateDivs(startingValue, endingValue);
+  generateDivs(starting, ending);
 });
 
 button.addEventListener("click", (e) => {
