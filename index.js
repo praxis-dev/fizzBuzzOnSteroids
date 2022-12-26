@@ -1,26 +1,31 @@
+/*jshint esversion: 6 */
+
 const form = document.querySelector("form");
-let starting = form.elements["startingValue"];
-let ending = form.elements["endingValue"];
-let fizz = form.elements["fizzValue"];
-let buzz = form.elements["buzzValue"];
+let starting = form.elements.startingValue;
+let ending = form.elements.endingValue;
+let fizz = form.elements.fizzValue;
+let buzz = form.elements.buzzValue;
 const button = document.querySelector("button");
 
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", function (e) {
   e.preventDefault();
-  generateDivs(startingValue, endingValue);
+  generateDivs(starting, ending);
 });
 
-button.addEventListener("click", (e) => {
+button.addEventListener("click", function (e) {
   e.preventDefault();
   clearAllDivs();
 });
 
 function clearAllDivs() {
-  console.log("clearing all divs");
   const divs = document.querySelectorAll(".div");
-  divs.forEach((div) => {
-    div.remove();
+  divs.forEach(function (div) {
+    remover(div);
   });
+}
+
+function remover(div) {
+  div.remove();
 }
 
 function generateDivs(starting, ending) {
@@ -35,9 +40,13 @@ function generateDivs(starting, ending) {
 
 function setIdforEachDiv() {
   const divs = document.querySelectorAll(".div");
-  divs.forEach((div, index) => {
-    div.id = `myid${index + 1}`;
+  divs.forEach(function (div, index) {
+    indexer(div, index);
   });
+}
+
+function indexer(div, index) {
+  div.id = `myid${index + 1}`;
 }
 
 function divFizzBuzz(fizz, buzz) {
