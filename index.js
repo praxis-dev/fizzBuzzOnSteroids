@@ -9,6 +9,7 @@ const button = document.querySelector("button");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
+
   generateDivs(starting, ending);
 });
 
@@ -29,13 +30,20 @@ function remover(div) {
 }
 
 function generateDivs(starting, ending) {
-  for (let i = starting.value; i <= ending.value; i++) {
-    const div = document.createElement("div");
-    div.classList.add("div");
-    document.querySelector("main").appendChild(div);
+  if (ending.value < starting.value) {
+    alert("Финальное значение должно быть больше начального");
+  } else {
+    if (document.querySelectorAll(".div").length > 0) {
+      clearAllDivs();
+    }
+    for (let i = starting.value; i <= ending.value; i++) {
+      const div = document.createElement("div");
+      div.classList.add("div");
+      document.querySelector("main").appendChild(div);
+    }
+    setIdforEachDiv();
+    divFizzBuzz(fizz, buzz);
   }
-  setIdforEachDiv();
-  divFizzBuzz(fizz, buzz);
 }
 
 function setIdforEachDiv() {
