@@ -1,0 +1,49 @@
+.main {
+  margin: 0 auto;
+  max-width: 1100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border: 1px solid #000;
+}
+
+.form {
+  width: 200px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.div {
+  width: 100px;
+  height: 50px;
+  border: 1px solid red;
+  margin-bottom: 30px;
+}
+
+.FizzBuzz {
+  margin-bottom: 30px;
+  border: 1px solid green;
+  background-color: green;
+  text-align: center;
+}
+
+.Fizz {
+  margin-bottom: 30px;
+  border: 1px solid cyan;
+  background-color: cyan;
+  text-align: center;
+}
+
+.Buzz {
+  margin-bottom: 30px;
+  border: 1px solid brown;
+  background-color: brown;
+  text-align: center;
+}
+
+.notFizzNorBuzzAndNotFizzBuzz {
+  margin-bottom: 30px;
+  border: 1px solid grey;
+  background-color: grey;
+  text-align: center;
+}
